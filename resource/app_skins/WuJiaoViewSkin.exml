@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WuJiaoViewSkin" width="400" height="400" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="group" left="0" top="0" bottom="0" right="0" anchorOffsetX="200" anchorOffsetY="200">
+		<e:Image source="img_wubianxing_png" x="200" y="200" anchorOffsetX="100" anchorOffsetY="100"/>
+		<e:Rect id="r_0" width="1" height="1" x="199" y="103" fillColor="0xed0707"/>
+		<e:Rect id="r_c" width="1" height="1" x="200" y="200" fillColor="0xED0707"/>
+		<e:Rect id="r_1" width="1" height="1" x="297.8" y="174.6" fillColor="0xED0707"/>
+		<e:Rect id="r_2" width="1" height="1" x="260.6" y="289.8" fillColor="0xED0707"/>
+		<e:Rect id="r_3" width="1" height="1" x="140.2" y="291.4" fillColor="0xED0707"/>
+		<e:Rect id="r_4" width="1" height="1" x="100.6" y="177" fillColor="0xED0707"/>
+		<e:Label id="lab_0" text="" x="175.5" y="74.69" size="18" textColor="0x020202" fontFamily="SimHei"/>
+		<e:Label id="lab_1" text="" x="302.67" y="152.66" size="18" fontFamily="SimHei" textColor="0x020202"/>
+		<e:Label id="lab_2" text="" x="256" y="299.32" size="18" textColor="0x020202" fontFamily="SimHei"/>
+		<e:Label id="lab_3" text="" x="72.67" y="298.65" size="18" textColor="0x020202" fontFamily="SimHei" textAlign="right"/>
+		<e:Label id="lab_4" text="" x="18" y="161.31" size="18" fontFamily="SimHei" textColor="0x020202" textAlign="right"/>
+		<e:Group width="86" height="61" x="311.4" y="53.8" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Group width="84" height="26" x="46" y="25">
+			<e:Rect width="40" height="3.6" x="3" y="19.4" scaleX="1" scaleY="1" strokeColor="0xE7E7E7" anchorOffsetY="0" fillColor="0x02b8f7"/>
+			<e:Label text="平均" x="28" y="8" size="16" textColor="0x020202"/>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+			</e:Group>
+			<e:Group width="84" height="26" x="56" y="35">
+			<e:Rect width="40" height="3.6" x="3" y="19.4" scaleX="1" scaleY="1" strokeColor="0xE7E7E7" anchorOffsetY="0" fillColor="0xf42c02"/>
+			<e:Label text="个人" x="28" y="8" size="16" textColor="0x020202"/>
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+			</e:layout>
+			</e:Group>
+			<e:layout>
+			<e:VerticalLayout horizontalAlign="center" verticalAlign="top"/>
+			</e:layout>
+		</e:Group>
+	</e:Group>
+</e:Skin>

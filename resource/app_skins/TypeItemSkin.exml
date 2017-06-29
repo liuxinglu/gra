@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TypeItemSkin" width="111" height="213" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect height="41" fillColor="0x045d87" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" top="0"/>
+	<e:Image source="img_xian_png" scaleX="1" scaleY="1" left="0" right="0" top="0" width="8"/>
+	<e:Image source="img_xian_png" scaleX="1" scaleY="1" left="0" right="0" top="42" x="10" y="10"/>
+	<e:Image source="img_xian_png" y="84.09" scaleX="1" scaleY="1" left="0" right="0" alpha="1"/>
+	<e:Image source="img_xian_png" y="126.63000000000001" scaleX="1" scaleY="1" left="0" right="0" alpha="1"/>
+	<e:Image source="img_xian_png" y="168.82000000000002" scaleX="1" scaleY="1" left="0" right="0"/>
+	<e:Image source="img_xian_png" scaleX="1" scaleY="1" bottom="0" left="0" right="0" alpha="1" x="10" y="10"/>
+	<e:Image source="img_xian_png" y="212.31" width="213" rotation="270" left="0"/>
+	<e:Label id="lab_head" text="-" x="7" y="10" anchorOffsetX="0" width="96" textAlign="center"/>
+	<e:Label id="lab_easy" text="-" x="7" y="51.75" anchorOffsetX="0" width="97" textAlign="center" textColor="0x050404"/>
+	<e:Label id="lab_normal" text="-" x="7" y="93.5" anchorOffsetX="0" width="97" textAlign="center" textColor="0x050404"/>
+	<e:Label id="lab_hard" text="-" x="7" y="135.25" anchorOffsetX="0" width="97" textAlign="center" textColor="0x020202"/>
+	<e:Label id="lab_total" text="-" x="7" y="177" anchorOffsetX="0" width="97" textAlign="center" textColor="0x020202"/>
+</e:Skin>

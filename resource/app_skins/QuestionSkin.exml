@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="QuestionSkin" width="60" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="img_xian_png" left="0" right="0" y="0"/>
+	<e:Image source="img_xian_png" left="0" right="0" y="59.8"/>
+	<e:Image source="img_xian_png" left="0" right="0" y="119.6"/>
+	<e:Image source="img_xian_png" left="0" right="0" y="179.39999999999998"/>
+	<e:Image source="img_xian_png" left="0" right="0" y="239.2"/>
+	<e:Image source="img_xian_png" left="0" right="0" bottom="0"/>
+	<e:Image source="img_xian_png" rotation="270" width="300" top="0" bottom="0" left="0"/>
+	<e:Label id="lab_index" text="-" x="14" y="8" size="41"/>
+	<e:Label id="lab_fullScore" text="-" x="15" y="69" size="41"/>
+	<e:Label id="lab_type" text="-" x="16" y="128" size="41"/>
+	<e:Label id="lab_score" text="-" x="16" y="190" size="41"/>
+	<e:Label id="lab_rate" text="-" x="15" y="249" size="41"/>
+</e:Skin>
