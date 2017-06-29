@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ChartItemSkin" width="96" height="250" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect id="rect_full" width="20" height="20" x="9" fillColor="0xadf902" bottom="0"/>
-	<e:Rect id="rect_ave" width="20" height="20" x="38.5" fillColor="0x02b8f7" bottom="0"/>
-	<e:Rect id="rect_my" width="20" height="20" x="68" fillColor="0xf42c02" bottom="0"/>
-</e:Skin>

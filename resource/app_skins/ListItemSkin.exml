@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="listItemSkin" width="560" height="90" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="img_xian_png" y="79" left="8" right="8"/>
-	<e:Label id="lab" text="" y="22" anchorOffsetX="0" left="27" right="28" anchorOffsetY="0" height="49" size="24" bold="true" textColor="0x070707" lineSpacing="5"/>
-</e:Skin>
