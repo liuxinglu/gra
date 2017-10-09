@@ -50,6 +50,7 @@ module lxl {
 		//护眼模式
 		public static PROTECTE_EYE:string = "CEVENT::PROTECTE_EYE";
 		public static EYE_CHANGE:string = "CEVENT::EYE_CHANGE";
+		public static SEND_MESSAGE:string = "CEVENT::SEND_MESSAGE";
 		private _param:any;
 		cancelBubble;
 		public constructor(type:string, param:any = null, timeSpan:number = 0, bubbles:boolean = false, cancelable:boolean = false)

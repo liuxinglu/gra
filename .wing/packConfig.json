@@ -1,0 +1,10 @@
+{
+    "useClip": false,
+    "maxImageWidth": 512,
+    "maxImageHeight": 512,
+    "defaultResPath": "d:\\work\\gra\\resource\\default.res.json",
+    "packGroups": {
+        "preload": true,
+        "main": true
+    }
+}

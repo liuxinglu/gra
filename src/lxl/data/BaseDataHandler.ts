@@ -22,7 +22,7 @@ module lxl.data {
 		public configure(data:interfaces.IPackageIn): void {
 			this.data = data;
 		}
-
+		
 		public send(data: data.BaseData = null): void {
 
 		}

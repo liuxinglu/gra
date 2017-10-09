@@ -1,0 +1,265 @@
+[
+	{
+		"native_language": "cn",
+		"use_global_mode": false,
+		"ignore_empty": false,
+		"auto_build": false,
+		"namespace": "xls",
+		"resource": "resource/xls/json",
+		"merge_ts": false,
+		"merge_js": true,
+		"source": "{extensionPath}/Demo/source/excel",
+		"encrypt": false,
+		"encrypt_file": "",
+		"join_lib_to_html": false,
+		"compress_json": false,
+		"obfuscator_lib": false,
+		"language_dictionary": "cn,中文;en,英文;ru,俄罗斯;tr,土耳其",
+		"out": {
+			"_json": "./xls/json",
+			"_ts": "./ts",
+			"_xml": "./xml",
+			"_const": "./ts",
+			"_d_ts": "{extensionPath}/Demo/src/typings",
+			"_js": "{extensionPath}/Demo/resource/libs",
+			"language": [
+				"cn",
+				"en",
+				"tw",
+				"ru",
+				"tr"
+			]
+		},
+		"items": {
+			"mail": {
+				"constField": [
+					{
+						"value": "content",
+						"desc": "content",
+						"key": "mail_title_const"
+					}
+				],
+				"values": [],
+				"iconPath": "",
+				"subkey": {},
+				"name": "mail",
+				"id": 4,
+				"merge": 1,
+				"typeName": "邮件标题类型",
+				"modification": 1498119084161,
+				"constNamespace": "xls"
+			},
+			"monsters": {
+				"values": [],
+				"iconPath": "resource/monster/",
+				"subkey": {
+					"id": {}
+				},
+				"name": "monsters",
+				"id": 9,
+				"merge": 0,
+				"typeName": "怪物",
+				"modification": 1498119084177,
+				"constNamespace": ""
+			},
+			"monsterReward": {
+				"values": [],
+				"multidimensionalValues": [
+					{
+						"types": [
+							"uint",
+							"uint"
+						],
+						"fields": [
+							"id",
+							"monster_reward_prop"
+						]
+					}
+				],
+				"iconPath": "",
+				"subkey": {
+					"id": {}
+				},
+				"name": "monsterReward",
+				"multidimensional": [
+					{
+						"field": "monster_reward_prop",
+						"table": [
+							"monsterRewardPropDef",
+							"id"
+						],
+						"split": [
+							";",
+							","
+						],
+						"type": "definition"
+					}
+				],
+				"id": 6,
+				"merge": 0,
+				"typeName": "掉落包",
+				"modification": 1498119084172,
+				"constNamespace": ""
+			},
+			"tips": {
+				"values": [],
+				"htmlField": [
+					"prompt"
+				],
+				"iconPath": "",
+				"subkey": {},
+				"name": "tips",
+				"id": 1,
+				"merge": 0,
+				"typeName": "提示语",
+				"modification": 1498119084185,
+				"constNamespace": ""
+			},
+			"monsterRewardProbabilityDef": {
+				"values": [],
+				"iconPath": "",
+				"subkey": {},
+				"name": "monsterRewardProbabilityDef",
+				"multidimensional": [
+					{
+						"table": [
+							"monsterReward",
+							"id"
+						],
+						"field": "id",
+						"type": "info"
+					}
+				],
+				"id": 8,
+				"merge": 0,
+				"typeName": "掉落包掉落概率数据结构定义",
+				"modification": 1498119084163,
+				"constNamespace": ""
+			},
+			"prop": {
+				"constField": [
+					{
+						"value": "quality",
+						"desc": "name",
+						"key": "quality_{name}"
+					}
+				],
+				"values": [],
+				"iconPath": "resource/prop/icon",
+				"subkey": {},
+				"name": "prop",
+				"id": 3,
+				"merge": 0,
+				"typeName": "道具",
+				"modification": 1498119084159,
+				"constNamespace": "xls"
+			},
+			"equip": {
+				"values": [],
+				"iconPath": "resource/equip/icon",
+				"subkey": {},
+				"name": "equip",
+				"id": 2,
+				"merge": 0,
+				"typeName": "装备",
+				"modification": 1498119084154,
+				"constNamespace": ""
+			},
+			"monsterGroup": {
+				"values": [],
+				"multidimensionalValues": [
+					"",
+					"",
+					{
+						"types": [
+							"monsterReward|info|id",
+							"uint",
+							"uint"
+						],
+						"fields": [
+							"id",
+							"monster_reward_prop",
+							"probability"
+						]
+					}
+				],
+				"iconPath": "",
+				"subkey": {},
+				"name": "monsterGroup",
+				"multidimensional": [
+					{
+						"table": [
+							"monsters",
+							"id",
+							"res"
+						],
+						"field": "monster_avatars_id",
+						"type": "link"
+					},
+					{
+						"field": "monsters",
+						"table": [
+							"monsters",
+							"id"
+						],
+						"split": [
+							";"
+						],
+						"type": "info"
+					},
+					{
+						"field": "monster_reward",
+						"table": [
+							"monsterRewardProbabilityDef",
+							"id"
+						],
+						"split": [
+							";",
+							","
+						],
+						"type": "definition"
+					}
+				],
+				"id": 5,
+				"merge": 0,
+				"typeName": "怪物组",
+				"modification": 1498119084166,
+				"constNamespace": ""
+			},
+			"monstersExp": {
+				"values": [],
+				"iconPath": "",
+				"subkey": {},
+				"name": "monstersExp",
+				"id": 10,
+				"merge": 0,
+				"typeName": "怪物经验",
+				"modification": 1498119084181,
+				"constNamespace": ""
+			},
+			"monsterRewardPropDef": {
+				"values": [],
+				"iconPath": "",
+				"subkey": {},
+				"name": "monsterRewardPropDef",
+				"id": 7,
+				"merge": 0,
+				"typeName": "掉落包物品和数量结构定义",
+				"modification": 1498119084165,
+				"constNamespace": ""
+			},
+			"tables": [
+				"tips",
+				"equip",
+				"prop",
+				"mail",
+				"monsterGroup",
+				"monsterReward",
+				"monsterRewardPropDef",
+				"monsterRewardProbabilityDef",
+				"monsters",
+				"monstersExp"
+			]
+		}
+	}
+]
