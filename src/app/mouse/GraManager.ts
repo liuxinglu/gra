@@ -4,6 +4,7 @@ module app {
 		}
 
 		private studentArr:Array<Array<Student>> = [];
+		curVersion:string = "ren";//人教版还是沪教版
 		curGrade:number = 0;
 		curStudent:Student;
 		curName:string;
@@ -210,7 +211,7 @@ module app {
 			}
 		}
 
-		getAllQuestion():Array<Array<Student>> {
+		getAllQuestion(version:string):Array<Array<Student>> {
 			let data;
 			let data2;
 			let evaData;
@@ -224,9 +225,18 @@ module app {
 				eva.eva2 = e.eva2;
 				this.configEva.push(eva);
 			});
-			for(let i = 1; i < 7; i++) {
-				data = JSON.parse(Res.getRes("q_g" + i + "_txt"));
-				data2 = JSON.parse(Res.getRes("type_g" + i + "_txt"));
+			let n1 = "";
+			let n2 = "";
+			for(let i = 1; i < 6; i++) {
+				if(version == "ren") {
+					n1 = "q_g" + (i + 2) + "_txt";
+					n2 = "type_g" + (i + 2) + "_txt";
+				} else if(version == "hu") {
+					n1 = "h_q_g" + (i + 2) + "_txt";
+					n2 = "h_type_g" + (i + 2) + "_txt";
+				}
+				data = JSON.parse(Res.getRes(n1));
+				data2 = JSON.parse(Res.getRes(n2));
 				let arr2:Array<Question> = [];
 				let arr:Array<Student> = [];
 				let res = {};
@@ -234,28 +244,13 @@ module app {
 					if(!res[e.身份ID + "_" + e.姓名]) {
 						res[e.身份ID + "_" + e.姓名] = 1;
 						let s = new Student();
-						if(e.身份ID)
-							s.id = e.身份ID;
-						else
-							s.id = "";
-						if(e.IP地址)
-							s.ipAddress = e.IP地址;
-						else
-							s.ipAddress = "";
+						s.id = e.身份ID ? e.身份ID : "";
+						s.ipAddress = e.IP地址 ? e.IP地址 : "";
 						s.name = e.姓名;
-						if(e.操作系统)
-							s.os = e.操作系统;
-						else
-							s.os = "";
+						s.os = e.操作系统 ? e.操作系统 : "";
 						s.score = e.测试得分;
-						if(e.手机号码)
-							s.phone = e.手机号码;
-						else 
-							s.phone = "";
-						if(e.索引)
-							s.index = e.索引;
-						else
-							s.index = 0;
+						s.phone = e.手机号码 ? e.手机号码 : "";
+						s.index = e.索引 ? e.索引 : 0;
 						for(let j = 1; j <= 20; j++) {
 							let q = new Question();
 							q.index = j;
@@ -268,19 +263,21 @@ module app {
 						arr.push(s);
 						arr2 = [];
 						data2.forEach(e => {
-							let q = new Question();
-							q.answer = arr[arr.length - 1].questionArr[parseInt(e.题号) - 1].answer;
-							q.index = e.题号;
-							q.knowledge = e.知识点;
-							q.ability = e.能力;
-							if(e.难 == "1") {
-								q.type = "难";
-							} else if(e.中 == "1") {
-								q.type = "中";
-							} else if(e.易 == "1") {
-								q.type = "易";
+							if(parseInt(e.题号) <= arr[arr.length - 1].questionArr.length) {
+								let q = new Question();
+								q.answer = arr[arr.length - 1].questionArr[parseInt(e.题号) - 1].answer;
+								q.index = e.题号;
+								q.knowledge = e.知识点;
+								q.ability = e.能力;
+								if(e.难 == "1") {
+									q.type = "难";
+								} else if(e.中 == "1") {
+									q.type = "中";
+								} else if(e.易 == "1") {
+									q.type = "易";
+								}
+								arr2.push(q);
 							}
-							arr2.push(q);
 						});
 						arr2.sort();
 						arr[arr.length - 1].questionArr = arr2;

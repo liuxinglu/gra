@@ -56,6 +56,8 @@ var app;
             var avepArr = [];
             var px = 0;
             var py = 0;
+            if (arr.length < 6)
+                return [[], []];
             for (var i = 0; i < 6; i++) {
                 this["unit" + i] = this["l" + i] / arr[i][0]; //单元值
                 if (i < 3) {

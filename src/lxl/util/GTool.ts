@@ -158,6 +158,8 @@ module lxl {
 		}
 
 		static drawWuJiao(g:egret.Graphics, color:number, arr:Array<egret.Point>):void {
+			if(arr.length == 0)
+				return;
 			g.lineStyle(1, color);
 			g.beginFill(color, 0.5);
 			g.moveTo(arr[0].x, arr[0].y);

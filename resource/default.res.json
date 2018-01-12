@@ -5,7 +5,7 @@
 			"name": "preload"
 		},
 		{
-			"keys": "img_bg_png,img_maths_png,img_qiqiu_png,img_tankuang_bg_png,img_xian_png,type_g4_txt,type_g2_txt,type_g3_txt,type_g5_txt,type_g6_txt,q_g2_txt,q_g3_txt,q_g4_txt,q_g5_txt,q_g6_txt,img_liubianxing_png,img_wubianxing_png,eva_txt,type_g1_txt,q_g1_txt",
+			"keys": "img_bg_png,img_maths_png,img_qiqiu_png,img_tankuang_bg_png,img_xian_png,type_g4_txt,type_g3_txt,type_g5_txt,type_g6_txt,q_g3_txt,q_g4_txt,q_g5_txt,q_g6_txt,img_liubianxing_png,img_wubianxing_png,eva_txt,h_q_g3_txt,type_g7_txt,h_type_g3_txt,h_type_g4_txt,h_type_g5_txt,h_type_g6_txt,h_type_g7_txt,h_q_g4_txt,q_g7_txt,h_q_g5_txt,h_q_g6_txt,h_q_g7_txt",
 			"name": "main"
 		}
 	],
@@ -181,11 +181,6 @@
 			"name": "type_g4_txt"
 		},
 		{
-			"url": "assets/data/type_g2.txt",
-			"type": "text",
-			"name": "type_g2_txt"
-		},
-		{
 			"url": "assets/data/type_g3.txt",
 			"type": "text",
 			"name": "type_g3_txt"
@@ -199,11 +194,6 @@
 			"url": "assets/data/type_g6.txt",
 			"type": "text",
 			"name": "type_g6_txt"
-		},
-		{
-			"url": "assets/data/q_g2.txt",
-			"type": "text",
-			"name": "q_g2_txt"
 		},
 		{
 			"url": "assets/data/q_g3.txt",
@@ -241,14 +231,69 @@
 			"name": "eva_txt"
 		},
 		{
-			"url": "assets/data/type_g1.txt",
-			"type": "text",
-			"name": "type_g1_txt"
+			"url": "assets/image001.png",
+			"type": "image",
+			"name": "image001_png"
 		},
 		{
-			"url": "assets/data/q_g1.txt",
+			"url": "assets/data/type_g7.txt",
 			"type": "text",
-			"name": "q_g1_txt"
+			"name": "type_g7_txt"
+		},
+		{
+			"url": "assets/data/h_type_g3.txt",
+			"type": "text",
+			"name": "h_type_g3_txt"
+		},
+		{
+			"url": "assets/data/h_type_g4.txt",
+			"type": "text",
+			"name": "h_type_g4_txt"
+		},
+		{
+			"url": "assets/data/h_type_g5.txt",
+			"type": "text",
+			"name": "h_type_g5_txt"
+		},
+		{
+			"url": "assets/data/h_type_g6.txt",
+			"type": "text",
+			"name": "h_type_g6_txt"
+		},
+		{
+			"url": "assets/data/h_type_g7.txt",
+			"type": "text",
+			"name": "h_type_g7_txt"
+		},
+		{
+			"url": "assets/data/h_q_g3.txt",
+			"type": "text",
+			"name": "h_q_g3_txt"
+		},
+		{
+			"url": "assets/data/h_q_g4.txt",
+			"type": "text",
+			"name": "h_q_g4_txt"
+		},
+		{
+			"url": "assets/data/q_g7.txt",
+			"type": "text",
+			"name": "q_g7_txt"
+		},
+		{
+			"url": "assets/data/h_q_g5.txt",
+			"type": "text",
+			"name": "h_q_g5_txt"
+		},
+		{
+			"url": "assets/data/h_q_g6.txt",
+			"type": "text",
+			"name": "h_q_g6_txt"
+		},
+		{
+			"url": "assets/data/h_q_g7.txt",
+			"type": "text",
+			"name": "h_q_g7_txt"
 		}
 	]
 }

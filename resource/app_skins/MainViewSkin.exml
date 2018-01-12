@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="MainViewSkin" width="1366" height="768" xmlns:e="http://ns.egret.com/eui" xmlns:ui="lxl.ui.*" xmlns:w="http://ns.egret.com/wing" xmlns:app="app.*">
+	<w:Config id="160e7f98c1a"/>
     <e:Scroller top="0" left="0" bottom="0" right="0">
 		<e:Group>
 			<e:Image source="img_logo_png" x="24" y="60.85"/>
-			<e:EditableText id="lab_name" width="167.27" height="42" text="许宁" x="239.88" border="true" bold="true" anchorOffsetX="0" anchorOffsetY="0" top="68" textColor="0x1c1818" verticalAlign="middle" textAlign="left" size="24"/>
-			<e:EditableText id="lab_grade" width="99.09" height="42" text="1" x="503.4" border="true" bold="true" anchorOffsetX="0" anchorOffsetY="0" y="68" textColor="0x1c1515" verticalAlign="middle" textAlign="left" size="24"/>
-			<ui:CButton id="btn_submit" label="查询" x="981.27" top="61"/>
-			<ui:CButton id="btn_save" label="保存" x="1096.43" top="61"/>
-			<e:Group id="group" left="50" right="50" top="122" height="2159">
+			<e:EditableText id="lab_name" width="167.27" height="42" text="" x="372.88" border="true" bold="true" anchorOffsetX="0" anchorOffsetY="0" top="68" textColor="0x1c1818" verticalAlign="middle" textAlign="left" size="24"/>
+			<e:EditableText id="lab_grade" width="52.09" height="42" text="1" x="636.4" border="true" bold="true" anchorOffsetX="0" anchorOffsetY="0" y="68" textColor="0x1c1515" verticalAlign="middle" textAlign="left" size="24"/>
+			<ui:CButton id="btn_submit" label="查询" x="1070.27" top="61"/>
+			<ui:CButton id="btn_save" label="保存" x="1193.43" top="61"/>
+			<e:Group id="group" left="50" right="50" top="122" height="2450">
 				<e:Image source="img_maths_png" scaleX="1" scaleY="1" left="1" top="1092"/>
 				<e:Image source="img_qiqiu_png" right="604" top="325" x="593" y="52" scaleX="1" scaleY="1"/>
 				<e:Label id="lab_title" text="   " size="50" horizontalCenter="0" fontFamily="SimHei" bold="true" x="262" scaleX="1" scaleY="1" anchorOffsetX="0" width="1266" textAlign="center" textColor="0x020202" top="0"/>
@@ -16,14 +17,22 @@
 				<app:LiuJiao id="liujiao" skinName="LiuJiaoSkin" top="768" horizontalCenter="0"/>
 				<app:WuJiao id="wujiao" skinName="WuJiaoSkin" top="1174" horizontalCenter="0"/>
 				<app:EvaView id="eva" skinName="EvaSkin" top="1580" horizontalCenter="0"/>
+				<e:Image source="image001_png" horizontalCenter="0" bottom="65"/>
 				<e:layout>
 					<e:BasicLayout/>
 				</e:layout>
 			</e:Group>
-			<e:Label text="年级" x="432.05" y="72" textColor="0x020202"/>
-			<e:EditableText id="lab_id" width="241.52" height="42" text="" x="718.56" border="true" bold="true" anchorOffsetX="0" anchorOffsetY="0" y="68" textColor="0x161313" prompt="您测试时留下的邮箱" size="24" textAlign="left" verticalAlign="middle"/>
-			<e:Label text="身份ID" x="622.36" y="72" textColor="0x020202"/>
-			<e:Label text="姓名" x="169.35" y="72" textColor="0x020202"/>
+			<e:Label text="年级" x="565.05" y="72" textColor="0x020202"/>
+			<e:EditableText id="lab_id" width="241.52" height="42" text="" x="798.56" border="true" bold="true" anchorOffsetX="0" anchorOffsetY="0" y="68" textColor="0x161313" prompt="您测试时留下的手机号" size="24" textAlign="left" verticalAlign="middle"/>
+			<e:Label text="身份ID" x="702.36" y="72" textColor="0x020202"/>
+			<e:Label text="姓名" x="302.35" y="72" textColor="0x020202"/>
+			<e:Group id="group_radio" width="136" x="169" y="59.85" anchorOffsetY="0" height="50" anchorOffsetX="0">
+				<e:RadioButton id="radio_ren" label="人教版" x="7" y="23" scaleX="1" scaleY="1" selected="true" groupName="group_radio"/>
+				<e:RadioButton id="radio_hu" label="沪教版" x="9" y="50" scaleX="1" scaleY="1" groupName="group_radio"/>
+				<e:layout>
+					<e:VerticalLayout/>
+				</e:layout>
+			</e:Group>
 		</e:Group>
 	</e:Scroller>
 </e:Skin>

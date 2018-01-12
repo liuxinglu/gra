@@ -97,6 +97,8 @@ module app {
 			let avepArr:Array<egret.Point> = [];
 			let px:number = 0;
 			let py:number = 0;
+			if(arr.length < 6)
+				return [[],[]];
 			for(let i = 0; i < 6; i++) {
 				this["unit" + i] = this["l" + i] / arr[i][0];//单元值
 				

@@ -6,6 +6,7 @@ var app;
     var GraManager = (function () {
         function GraManager() {
             this.studentArr = [];
+            this.curVersion = "ren"; //人教版还是沪教版
             this.curGrade = 0;
             this.curGradeStudents = [];
             this.ablities = [];
@@ -196,7 +197,7 @@ var app;
                 }
             }
         };
-        GraManager.prototype.getAllQuestion = function () {
+        GraManager.prototype.getAllQuestion = function (version) {
             var _this = this;
             var data;
             var data2;
@@ -211,9 +212,19 @@ var app;
                 eva.eva2 = e.eva2;
                 _this.configEva.push(eva);
             });
+            var n1 = "";
+            var n2 = "";
             var _loop_1 = function (i) {
-                data = JSON.parse(Res.getRes("q_g" + i + "_txt"));
-                data2 = JSON.parse(Res.getRes("type_g" + i + "_txt"));
+                if (version == "ren") {
+                    n1 = "q_g" + (i + 2) + "_txt";
+                    n2 = "type_g" + (i + 2) + "_txt";
+                }
+                else if (version == "hu") {
+                    n1 = "h_q_g" + (i + 2) + "_txt";
+                    n2 = "h_type_g" + (i + 2) + "_txt";
+                }
+                data = JSON.parse(Res.getRes(n1));
+                data2 = JSON.parse(Res.getRes(n2));
                 var arr2 = [];
                 var arr = [];
                 var res = {};
@@ -221,28 +232,13 @@ var app;
                     if (!res[e.身份ID + "_" + e.姓名]) {
                         res[e.身份ID + "_" + e.姓名] = 1;
                         var s = new app.Student();
-                        if (e.身份ID)
-                            s.id = e.身份ID;
-                        else
-                            s.id = "";
-                        if (e.IP地址)
-                            s.ipAddress = e.IP地址;
-                        else
-                            s.ipAddress = "";
+                        s.id = e.身份ID ? e.身份ID : "";
+                        s.ipAddress = e.IP地址 ? e.IP地址 : "";
                         s.name = e.姓名;
-                        if (e.操作系统)
-                            s.os = e.操作系统;
-                        else
-                            s.os = "";
+                        s.os = e.操作系统 ? e.操作系统 : "";
                         s.score = e.测试得分;
-                        if (e.手机号码)
-                            s.phone = e.手机号码;
-                        else
-                            s.phone = "";
-                        if (e.索引)
-                            s.index = e.索引;
-                        else
-                            s.index = 0;
+                        s.phone = e.手机号码 ? e.手机号码 : "";
+                        s.index = e.索引 ? e.索引 : 0;
                         for (var j = 1; j <= 20; j++) {
                             var q = new app.Question();
                             q.index = j;
@@ -255,21 +251,23 @@ var app;
                         arr.push(s);
                         arr2 = [];
                         data2.forEach(function (e) {
-                            var q = new app.Question();
-                            q.answer = arr[arr.length - 1].questionArr[parseInt(e.题号) - 1].answer;
-                            q.index = e.题号;
-                            q.knowledge = e.知识点;
-                            q.ability = e.能力;
-                            if (e.难 == "1") {
-                                q.type = "难";
+                            if (parseInt(e.题号) <= arr[arr.length - 1].questionArr.length) {
+                                var q = new app.Question();
+                                q.answer = arr[arr.length - 1].questionArr[parseInt(e.题号) - 1].answer;
+                                q.index = e.题号;
+                                q.knowledge = e.知识点;
+                                q.ability = e.能力;
+                                if (e.难 == "1") {
+                                    q.type = "难";
+                                }
+                                else if (e.中 == "1") {
+                                    q.type = "中";
+                                }
+                                else if (e.易 == "1") {
+                                    q.type = "易";
+                                }
+                                arr2.push(q);
                             }
-                            else if (e.中 == "1") {
-                                q.type = "中";
-                            }
-                            else if (e.易 == "1") {
-                                q.type = "易";
-                            }
-                            arr2.push(q);
                         });
                         arr2.sort();
                         arr[arr.length - 1].questionArr = arr2;
@@ -277,7 +275,7 @@ var app;
                 });
                 dataArr.push(arr);
             };
-            for (var i = 1; i < 7; i++) {
+            for (var i = 1; i < 6; i++) {
                 _loop_1(i);
             }
             this.studentArr = dataArr;
